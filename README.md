@@ -7,8 +7,10 @@ Both single-structure and batched alignments are supported, returning rotation m
 The implementation enforces proper rotations and uses vectorized SVD for high throughput.
 
 ### Usage  
-Input coordinates must be provided as arrays of shape `[L, 3]` for single models or `[N, L, 3]` for batches, where `L` is the number of atoms.  
+Input coordinates must be provided as arrays of shape `[L, 3]` for the anchor molecule and `[L, 3]` for a single mobile, or `[N, L, 3]` for batches, where `L` is the number of atoms.  
 Use `rmsd_kabsch_multi(anchor, mobiles)` to compute RMSDs and obtain the corresponding rotation and translation.  
+The return value is `[rmsd, R, t]` in the same shape as the mobile array.
+
 To produce aligned coordinates, apply the transformation via `apply_transform(coords, R, t)`.
 
 # Misc

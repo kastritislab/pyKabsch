@@ -17,5 +17,5 @@ To produce aligned coordinates, apply the transformation via `apply_transform(co
 Tested with: numpy==2.3.2
 
 # Reference
-[![DOI](https://zenodo.org/badge/1113807740.svg)](https://doi.org/10.5281/zenodo.17880364)
+If you use this code within your work, please cite us! ([![DOI](https://zenodo.org/badge/1113807740.svg)](https://doi.org/10.5281/zenodo.17880364))
 
